@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.2"
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'aws-sdk-s3', '~> 1'
+gem "aws-sdk-s3", require: false
 gem 'aws-sdk-rails', '~> 3'
 gem 'jsonapi-serializer'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
