@@ -1,0 +1,14 @@
+{
+  "name": "technician_app_backend",
+  "version": "0.1.0", 
+  "engines": {
+      "node": "18.0.0",
+      "yarn": "1.22.18"
+  },
+  
+  "scripts": {
+    "build": "yarn --cwd frontend install && yarn --cwd frontend build",
+    "deploy": "cp -a frontend/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  }
+}
